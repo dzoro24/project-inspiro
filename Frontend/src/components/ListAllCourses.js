@@ -42,7 +42,8 @@ const ListAllCourses = () => {
     }
   };
   return (
-    <div className="courses__full-content">
+    <>
+    <div className="courses__full-content mb-5">
       <div className="courses__page col-xl-3 col-lg-3 col-md-12">
         <div className="courses__header">Courses offered</div> 
        
@@ -92,9 +93,10 @@ const ListAllCourses = () => {
       <br></br>
       <br></br>
       <br></br>
-      {/* <ContactUsHomePage /> */}
-      {/* <Footer /> */}
+     
     </div>
+    <ContactUsHomePage /> 
+    </>
   );
 };
 export default ListAllCourses;

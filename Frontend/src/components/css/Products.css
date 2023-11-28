@@ -97,7 +97,7 @@ body {
 
 .product__item{
   color: black;
-  background-color: blueviolet;
+  background-color: rgb(60, 158, 219);
   padding: 24px;
   display: flex;
   align-items: center;
