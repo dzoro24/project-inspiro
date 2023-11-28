@@ -28,7 +28,7 @@
 
 /* Style for the right section (Map, Form, etc.) */
 .right-section {
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 /* Style for each individual contact item */
@@ -219,6 +219,27 @@ button:hover {
   &:hover{
     color: red;
   }
+}
+
+@media (max-width: 768px) {
+  .right-section {
+    padding-left: 0;
+  }
+  .contact-container{
+    flex-direction: column;
+  }
+  .input-group input, .input-group textarea {
+    width: 90%;
+  }
+
+  .heading__content{
+    padding: 30px;
+  }
+
+  .i-sidemenu .sidemenu-hover.toggled {
+    width: 45px !important;
+    min-width: 45px !important;
+}
 }
 
 
