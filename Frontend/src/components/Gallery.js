@@ -10,7 +10,7 @@ const Gallery = () => {
   }
   return (
     <div>
-      <div className="heading">
+      <div className="heading heading__content">
         <h1>Photos & Video Gallery</h1>
         <div className="gallery__content mt-5">     <div class="gallery__card col-xl-4 col-lg-4 col-sm-10">
   <img src={img2} alt="Card Image" />
