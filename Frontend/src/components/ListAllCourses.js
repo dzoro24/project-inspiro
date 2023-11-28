@@ -96,7 +96,6 @@ const ListAllCourses = () => {
      
     </div>
     <ContactUsHomePage /> 
-     <Footer />
     </>
   );
 };

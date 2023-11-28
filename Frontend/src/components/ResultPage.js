@@ -52,7 +52,6 @@ const ResultPage = () => {
   </div>
 </div>
       <ContactUsHomePage />
-      <Footer />
     </div>
   );
 };

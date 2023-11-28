@@ -4,7 +4,6 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useInspiroCrud } from "./context/InspiroContext";
-import DemoClass from "./DemoClass";
 
 const Navigationbar = () => {
   const Gallery = { key1: "Photo", key2: "Video" };
@@ -65,19 +64,19 @@ const Navigationbar = () => {
   };
 
   const handleCourseClick = (index, Title, subarr) => {
-    if (window.innerWidth <= 768) {
-      toggleCoursesDropDoem();
-    }
+    // if (window.innerWidth <= 768) {
+    //   toggleCoursesDropDoem();
+    // }
+    toggleCoursesDropDoem();
     setheaderShowDropdown(false);
     setShowDropdown(false);
     setShowCourses(false);
     setSelectedCourse(selectedCourse === index ? null : index);
-    // setSelectedSubtitle(null);
 
     if (
       Title !== "KPSC Prelims" &&
-      Title !== "KEA" &&
-      window.innerWidth > 768
+      Title !== "KEA"
+      // window.innerWidth > 768
     ) {
       navigate("ListAllCourses", {
         state: { data: { Title, subarr } },
@@ -162,6 +161,7 @@ const Navigationbar = () => {
                 <div
                   className="navigation__gallery"
                   onClick={toggleDropdownGallery}
+                  id="galleryComponent"
                 >
                   Gallery <KeyboardArrowDownOutlinedIcon />
                 </div>
@@ -185,7 +185,8 @@ const Navigationbar = () => {
               <div className="courses-dropdown-content">
                 {Courses.map((course, index) => (
                   <div key={index}>
-                    {course.Title === "KPSC Prelims" || course.Title === "KEA" ? (
+                    {course.Title === "KPSC Prelims" ||
+                    course.Title === "KEA" ? (
                       <div
                         onClick={() =>
                           handleCourseClick(index, course.Title, course.subarr)
@@ -206,7 +207,8 @@ const Navigationbar = () => {
                       </div>
                     )}
 
-                    <div className="test123">
+                    {/* <div className="test123"> */}
+                    <div>
                       {selectedCourse === index &&
                         Array.isArray(course.SubTitle) &&
                         course.SubTitle.map((subTitle, subIndex) => (
@@ -220,7 +222,7 @@ const Navigationbar = () => {
                             }
                             className="sub-Title"
                           >
-                            <div className=" mt-3">{subTitle.Title}</div>
+                            <div className="mt-2">{subTitle.Title}</div>
                           </div>
                         ))}
                     </div>

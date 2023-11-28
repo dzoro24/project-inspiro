@@ -21,7 +21,6 @@ const DemoClass = () => {
       <br></br>
       <br></br>
       <ContactUsHomePage />
-      <Footer />
     </div>
   );
 };
